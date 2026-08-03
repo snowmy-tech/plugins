@@ -1,0 +1,18 @@
+{
+  "name": "azure-app-platform",
+  "version": "0.1.0",
+  "description": "Prepare, validate, deploy, and operate applications on Azure.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure App Platform",
+    "shortDescription": "Build and deploy Azure applications.",
+    "longDescription": "End-to-end Azure application readiness, azd preparation, validation, deployment, App Service, serverless, hosted Copilot SDK, and enterprise infrastructure planning guidance.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Assess this application and prepare it for an Azure deployment."
+  }
+}

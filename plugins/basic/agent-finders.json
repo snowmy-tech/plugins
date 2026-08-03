@@ -1,0 +1,20 @@
+{
+  "note": "Shared list of Agent Finders (discovery services) the connectors can search, each with a name. The agentfinder skill seeds this into ~/.agentfinder/finders.json on first use, shows it as a menu, and remembers the user's pick in `selected`. Add your own finders to the `finders` array; set `selected` to a finder's `id` to skip the menu.",
+  "selected": null,
+  "finders": [
+    {
+      "id": "github",
+      "name": "GitHub Agent Finder",
+      "description": "GitHub's public catalog of installable MCP servers, skills, and tools.",
+      "search": "https://agentfinder.github.com/api/v1/search",
+      "mcp": "https://agentfinder.github.com/api/v1/mcp"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Discover",
+      "description": "Hugging Face's discovery service for agentic resources.",
+      "search": "https://huggingface-hf-discover.hf.space/search",
+      "mcp": "https://huggingface-hf-discover.hf.space/mcp"
+    }
+  ]
+}

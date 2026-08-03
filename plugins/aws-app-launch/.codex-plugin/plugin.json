@@ -1,0 +1,21 @@
+{
+  "name": "aws-app-launch",
+  "version": "1.0.0",
+  "description": "Migrate and launch full-stack or frontend applications on AWS using AWS Blocks and the Launch with AWS workflow.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/blocks/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "aws-blocks", "application-launch", "migration", "hosting"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS App Launch",
+    "shortDescription": "Launch web apps on AWS",
+    "longDescription": "Guidance for AWS Blocks applications and the Launch with AWS migration workflow for full-stack and frontend web apps.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/blocks/",
+    "defaultPrompt": ["Assess my web app for AWS migration", "Create an AWS Blocks application", "Plan a launch to AWS"]
+  }
+}

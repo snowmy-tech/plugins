@@ -1,0 +1,21 @@
+{
+  "name": "aws-sdk-javascript",
+  "version": "1.0.0",
+  "description": "Write JavaScript and TypeScript applications that use AWS SDK for JavaScript v3.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/sdk-for-javascript/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "javascript", "typescript", "aws-sdk-v3"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS SDK for JavaScript",
+    "shortDescription": "Use AWS SDK for JavaScript v3",
+    "longDescription": "Language-specific guidance for JavaScript and TypeScript applications using AWS SDK for JavaScript v3.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/sdk-for-javascript/",
+    "defaultPrompt": ["Create an AWS SDK v3 client", "Handle AWS SDK v3 pagination", "Configure retries in AWS SDK v3"]
+  }
+}

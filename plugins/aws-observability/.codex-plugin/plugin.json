@@ -1,0 +1,21 @@
+{
+  "name": "aws-observability",
+  "version": "1.0.0",
+  "description": "Build, configure, debug, and optimize AWS observability with CloudWatch, X-Ray, CloudTrail, ADOT, and Application Signals.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/cloudwatch/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "cloudwatch", "x-ray", "cloudtrail", "opentelemetry"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Observability",
+    "shortDescription": "Monitor and diagnose AWS systems",
+    "longDescription": "Guidance for CloudWatch Logs, metrics, alarms, dashboards, X-Ray, CloudTrail, ADOT, and Application Signals.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/cloudwatch/",
+    "defaultPrompt": ["Write a CloudWatch Logs Insights query", "Design AWS service alarms", "Instrument a service with ADOT"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "amazon-bedrock",
+  "version": "1.0.0",
+  "description": "Build generative AI applications with Amazon Bedrock, including models, RAG, agents, guardrails, and AgentCore.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/bedrock/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "amazon-bedrock", "generative-ai", "rag", "agents"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Amazon Bedrock",
+    "shortDescription": "Build Bedrock AI applications",
+    "longDescription": "Guidance for Amazon Bedrock model invocation, Knowledge Bases, agents, guardrails, AgentCore, quotas, and cost tracking.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/bedrock/",
+    "defaultPrompt": ["Help me invoke a Bedrock model safely", "Design a Bedrock Knowledge Base", "Troubleshoot a Bedrock throttling error"]
+  }
+}

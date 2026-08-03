@@ -1,0 +1,21 @@
+{
+  "name": "aws-sdk-swift",
+  "version": "1.0.0",
+  "description": "Write Swift applications that use the AWS SDK for Swift.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/sdk-for-swift/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "swift", "aws-sdk-swift"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS SDK for Swift",
+    "shortDescription": "Use the AWS SDK for Swift",
+    "longDescription": "Language-specific guidance for Swift applications using AWS SDK for Swift clients, configurations, credentials, waiters, and pagination.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/sdk-for-swift/",
+    "defaultPrompt": ["Create an AWS SDK for Swift client", "Configure AWS SDK for Swift credentials", "Paginate S3 objects in Swift"]
+  }
+}

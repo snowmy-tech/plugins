@@ -1,0 +1,13 @@
+{
+  "name": "basic",
+  "version": "0.1.0",
+  "description": "Agent Finder skill and MCP compatibility for discovering agentic resources without automatic installation.",
+  "author": {
+    "name": "snowmy-tech",
+    "url": "https://github.com/snowmy-tech"
+  },
+  "homepage": "https://agenticresourcediscovery.org/connect/",
+  "repository": "https://github.com/snowmy-tech/plugins",
+  "license": "MIT",
+  "keywords": ["agent-finder", "ard", "mcp", "discovery"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "aws-deployment-tooling",
+  "version": "1.0.0",
+  "description": "Author, validate, deploy, and troubleshoot AWS infrastructure and delivery pipelines with CDK, CloudFormation, and AWS CI/CD services.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/developer/tools/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "cdk", "cloudformation", "codepipeline", "codebuild", "codedeploy"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Deployment Tooling",
+    "shortDescription": "Build and deploy AWS infrastructure",
+    "longDescription": "Guidance for AWS CDK, CloudFormation, and AWS CodePipeline, CodeBuild, CodeDeploy, CodeConnections, and CodeArtifact.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/developer/tools/",
+    "defaultPrompt": ["Validate a CloudFormation template", "Troubleshoot a CDK deployment", "Design a CodePipeline delivery workflow"]
+  }
+}

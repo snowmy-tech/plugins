@@ -1,0 +1,18 @@
+{
+  "name": "azure-ai-services",
+  "version": "0.1.0",
+  "description": "Build Azure AI services and configure Azure API Management as an AI gateway.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Ai Services",
+    "shortDescription": "Build Azure AI services and AI gateways.",
+    "longDescription": "Guidance for Azure AI services including Search, Speech, OpenAI, Document Intelligence, and Azure API Management AI Gateway. Microsoft Foundry is intentionally separate.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Help me build an Azure AI service with an API Management AI gateway."
+  }
+}

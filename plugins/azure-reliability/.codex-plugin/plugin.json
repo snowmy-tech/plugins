@@ -1,0 +1,18 @@
+{
+  "name": "azure-reliability",
+  "version": "0.1.0",
+  "description": "Assess and improve Azure application reliability and resilience.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Reliability",
+    "shortDescription": "Assess Azure application resilience.",
+    "longDescription": "Guidance for assessing and improving reliability of Azure Functions and App Service workloads, including zone redundancy and multi-region failover.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Assess this Azure application for reliability risks and recommend staged resilience improvements."
+  }
+}

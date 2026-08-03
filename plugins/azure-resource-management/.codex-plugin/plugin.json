@@ -1,0 +1,18 @@
+{
+  "name": "azure-resource-management",
+  "version": "0.1.0",
+  "description": "Discover Azure resources and visualize their architecture and relationships.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Resource Management",
+    "shortDescription": "Discover and visualize Azure resources.",
+    "longDescription": "Guidance for cross-subscription Azure resource discovery, Resource Graph queries, tag analysis, and Mermaid architecture diagrams.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Inventory this Azure environment and create an architecture diagram of its resource relationships."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "aws-cost-management",
+  "version": "1.0.0",
+  "description": "Analyze AWS costs, identify savings, manage budgets, and evaluate commitments and right-sizing recommendations.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/aws-cost-management/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "cost-explorer", "budgets", "savings-plans", "billing"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Cost Management",
+    "shortDescription": "Analyze and optimize AWS spend",
+    "longDescription": "Guidance for Cost Explorer, Budgets, Savings Plans, Reserved Instances, Compute Optimizer, CUR, pricing, and anomalies.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/aws-cost-management/",
+    "defaultPrompt": ["Analyze AWS costs by service", "Run an AWS cost audit", "Evaluate Savings Plans recommendations"]
+  }
+}

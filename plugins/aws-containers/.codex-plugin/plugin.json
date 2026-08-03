@@ -1,0 +1,21 @@
+{
+  "name": "aws-containers",
+  "version": "1.0.0",
+  "description": "Build, deploy, and operate container workloads with Amazon EKS, ECS, Fargate, ECR, and Elastic Beanstalk.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/containers/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "eks", "ecs", "fargate", "ecr", "containers"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Containers",
+    "shortDescription": "Deploy AWS container workloads",
+    "longDescription": "Guidance for Kubernetes on EKS, ECS and Fargate services, ECR registries, and Elastic Beanstalk environments.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/containers/",
+    "defaultPrompt": ["Plan an EKS workload", "Deploy an ECS Fargate service", "Set up an ECR repository policy"]
+  }
+}

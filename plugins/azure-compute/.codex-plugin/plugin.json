@@ -1,0 +1,18 @@
+{
+  "name": "azure-compute",
+  "version": "0.1.0",
+  "description": "Provision, scale, and operate Azure virtual-machine workloads.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Compute",
+    "shortDescription": "Operate Azure VM and VMSS workloads.",
+    "longDescription": "Guidance for planning, provisioning, scaling, and troubleshooting Azure Compute virtual machines and virtual machine scale sets.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Help me select and configure Azure compute for this workload."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "aws-messaging-streaming",
+  "version": "1.0.0",
+  "description": "Design and implement AWS messaging and streaming patterns using SQS, SNS, EventBridge, Kinesis, MSK, and related services.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/messaging/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "sqs", "sns", "eventbridge", "kinesis", "msk"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Messaging & Streaming",
+    "shortDescription": "Design AWS event and data flows",
+    "longDescription": "Guidance for SQS, SNS, EventBridge, Amazon MQ, Kinesis Data Streams, Data Firehose, Flink, and MSK.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/messaging/",
+    "defaultPrompt": ["Choose between SQS and Kinesis", "Design an EventBridge integration", "Configure an SQS dead-letter queue"]
+  }
+}

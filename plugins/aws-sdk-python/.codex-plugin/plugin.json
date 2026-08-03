@@ -1,0 +1,21 @@
+{
+  "name": "aws-sdk-python",
+  "version": "1.0.0",
+  "description": "Write Python applications that use boto3 and botocore safely and effectively.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/sdk-for-python/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "python", "boto3", "botocore"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS SDK for Python",
+    "shortDescription": "Use boto3 and botocore",
+    "longDescription": "Language-specific guidance for Python applications using boto3 and botocore clients, resources, sessions, paginators, and waiters.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/sdk-for-python/",
+    "defaultPrompt": ["Create a boto3 service client", "Handle boto3 errors correctly", "Use a boto3 paginator"]
+  }
+}

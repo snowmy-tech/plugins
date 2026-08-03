@@ -1,0 +1,21 @@
+{
+  "name": "aws-serverless",
+  "version": "1.0.0",
+  "description": "Build, deploy, manage, debug, and optimize AWS serverless applications.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/serverless/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "lambda", "api-gateway", "step-functions", "eventbridge", "sam"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Serverless",
+    "shortDescription": "Build AWS serverless systems",
+    "longDescription": "Guidance for Lambda, API Gateway, Step Functions, EventBridge, event sources, concurrency, SAM, and CDK serverless stacks.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/serverless/",
+    "defaultPrompt": ["Design a Lambda event workflow", "Debug a Lambda timeout", "Configure API Gateway CORS safely"]
+  }
+}

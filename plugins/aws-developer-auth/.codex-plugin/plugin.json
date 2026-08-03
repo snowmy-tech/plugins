@@ -1,0 +1,21 @@
+{
+  "name": "aws-developer-auth",
+  "version": "1.0.0",
+  "description": "Set up and verify secure short-lived AWS CLI and SDK credentials for local development.",
+  "author": { "name": "AWS" },
+  "homepage": "https://docs.aws.amazon.com/signin/latest/userguide/command-line-sign-in.html",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "authentication", "aws-login", "credentials"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Developer Authentication",
+    "shortDescription": "Set up local AWS credentials",
+    "longDescription": "Guidance for secure, short-lived local AWS credentials with aws login, including verification and reauthentication.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://docs.aws.amazon.com/signin/latest/userguide/command-line-sign-in.html",
+    "defaultPrompt": ["Set up AWS CLI credentials", "Check my AWS credential status", "Help me reauthenticate to AWS"]
+  }
+}

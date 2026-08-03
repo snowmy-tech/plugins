@@ -1,0 +1,18 @@
+{
+  "name": "azure-migration",
+  "version": "0.1.0",
+  "description": "Assess, migrate, modernize, and upgrade workloads for Azure.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Migration",
+    "shortDescription": "Migrate and modernize workloads for Azure.",
+    "longDescription": "Guidance for cross-cloud Azure migration assessments, migration planning, SDK upgrades, and workload modernization.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Assess this workload and create an Azure migration and modernization plan."
+  }
+}

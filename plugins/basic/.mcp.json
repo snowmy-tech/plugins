@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent-finder": {
+      "type": "http",
+      "url": "https://agentfinder.github.com/api/v1/mcp"
+    }
+  }
+}

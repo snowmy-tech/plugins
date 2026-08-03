@@ -1,0 +1,18 @@
+{
+  "name": "azure-identity",
+  "version": "0.1.0",
+  "description": "Implement Microsoft Entra identity, agent identity, and Azure RBAC.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Identity",
+    "shortDescription": "Use Entra identity and least-privilege RBAC.",
+    "longDescription": "Guidance for Microsoft Entra app registrations, Entra Agent Identity Blueprints, and Azure RBAC role selection.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Help me design Microsoft Entra authentication and least-privilege Azure RBAC."
+  }
+}

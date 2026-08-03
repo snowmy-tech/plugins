@@ -1,0 +1,18 @@
+{
+  "name": "azure-storage",
+  "version": "0.1.0",
+  "description": "Build and operate Azure Storage services.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Storage",
+    "shortDescription": "Use Azure Storage services.",
+    "longDescription": "Guidance for Azure Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake Storage.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Help me design secure Azure Storage for this application."
+  }
+}

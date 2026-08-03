@@ -1,0 +1,21 @@
+{
+  "name": "aws-compute",
+  "version": "1.0.0",
+  "description": "Provision, scale, secure, and troubleshoot Amazon EC2 workloads and Auto Scaling fleets.",
+  "author": { "name": "AWS" },
+  "homepage": "https://aws.amazon.com/ec2/",
+  "repository": "https://github.com/aws/",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "ec2", "autoscaling", "systems-manager"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AWS Compute",
+    "shortDescription": "Operate Amazon EC2 workloads",
+    "longDescription": "Guidance for EC2 instance selection, launch templates, Auto Scaling, AMIs, IMDSv2, and Systems Manager operations.",
+    "developerName": "AWS",
+    "category": "Development",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://aws.amazon.com/ec2/",
+    "defaultPrompt": ["Choose an EC2 instance type", "Design an EC2 Auto Scaling fleet", "Troubleshoot an EC2 status check failure"]
+  }
+}

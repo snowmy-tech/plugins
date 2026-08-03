@@ -1,0 +1,18 @@
+{
+  "name": "azure-cost-management",
+  "version": "0.1.0",
+  "description": "Query Azure costs, forecast spending, and optimize cloud expenditure.",
+  "author": {
+    "name": "Microsoft"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Azure Cost Management",
+    "shortDescription": "Analyze and optimize Azure spending.",
+    "longDescription": "Guidance for Azure cost queries, forecasts, cost allocation, and service-specific optimization.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [],
+    "defaultPrompt": "Analyze our Azure costs, forecast spending, and identify concrete savings opportunities."
+  }
+}

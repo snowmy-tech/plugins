@@ -1,0 +1,48 @@
+{
+  "name": "microsoft-foundry",
+  "version": "1.2.1+codex.20260803130326",
+  "description": "Skills and interactive Copilot canvas for designing, configuring, testing, deploying, evaluating, and managing Microsoft Foundry agents and models.",
+  "author": {
+    "name": "Microsoft",
+    "url": "https://www.microsoft.com/"
+  },
+  "homepage": "https://learn.microsoft.com/azure/ai-foundry/",
+  "repository": "https://github.com/microsoft/skills",
+  "license": "MIT",
+  "keywords": [
+    "microsoft-foundry",
+    "agent-builder",
+    "agent-inspector",
+    "azure-ai",
+    "foundry",
+    "hosted-agents",
+    "agents",
+    "models",
+    "evaluation",
+    "fine-tuning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Microsoft Foundry",
+    "shortDescription": "Build and operate Microsoft Foundry agents and models.",
+    "longDescription": "End-to-end Microsoft Foundry workflows for projects, model deployment, hosted and prompt agents, invocation, evaluation, observability, optimization, fine-tuning, quota, RBAC, networking, and troubleshooting.",
+    "developerName": "Microsoft",
+    "category": "Developer",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://learn.microsoft.com/azure/ai-foundry/",
+    "privacyPolicyURL": "https://privacy.microsoft.com/privacystatement",
+    "termsOfServiceURL": "https://www.microsoft.com/servicesagreement",
+    "defaultPrompt": [
+      "Create and deploy a Microsoft Foundry agent.",
+      "Evaluate and optimize my Foundry agent.",
+      "Deploy a model to Microsoft Foundry."
+    ],
+    "brandColor": "#0078D4",
+    "composerIcon": "./assets/preview.png",
+    "logo": "./assets/preview.png"
+  },
+  "mcpServers": "./.mcp.json"
+}

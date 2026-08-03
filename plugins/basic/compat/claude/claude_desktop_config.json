@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent-finder": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://agentfinder.github.com/api/v1/mcp"]
+    }
+  }
+}
