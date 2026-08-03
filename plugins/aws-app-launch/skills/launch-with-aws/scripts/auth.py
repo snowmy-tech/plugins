@@ -9,7 +9,9 @@ Uses SSO OIDC directly:
     3. CreateToken (authorization_code grant) -> access + refresh tokens
     4. CreateToken (refresh_token grant) -> silent refresh
 
-Tokens cached in ~/.launch-with-aws/session.json (mode 0600).
+Non-secret session metadata is cached in ~/.launch-with-aws/session.json.
+Client secrets and tokens are stored in macOS Keychain or an explicitly
+configured OS credential helper.
 """
 
 import base64
@@ -45,6 +47,12 @@ from launch_config import (
     TOKEN_EXPIRY_BUFFER_SECS,
     ClientCredentials,
     StoredSession,
+)
+from credential_store import (
+    CredentialStoreError,
+    delete_session_secrets,
+    load_session_secrets,
+    store_session_secrets,
 )
 
 __version__ = "0.1.0"
@@ -86,15 +94,8 @@ def _generate_state() -> str:
 # ── Session persistence ──────────────────────────────────────────────────
 
 
-def load_session() -> Optional[StoredSession]:
-    try:
-        with open(_session_file()) as f:
-            return StoredSession.from_json(f.read())
-    except (OSError, ValueError, TypeError, KeyError):
-        return None
-
-
-def save_session(session: StoredSession) -> None:
+def _write_session_metadata(session: StoredSession) -> None:
+    """Atomically persist non-secret session state with owner-only access."""
     directory = _session_dir()
     os.makedirs(directory, exist_ok=True)
     os.chmod(directory, stat.S_IRWXU)
@@ -103,11 +104,72 @@ def save_session(session: StoredSession) -> None:
     try:
         fd, tmp_path = tempfile.mkstemp(dir=directory, suffix=".tmp")
         with os.fdopen(fd, "w") as f:
-            f.write(session.to_json(indent=2))
+            f.write(session.to_metadata_json(indent=2))
         os.chmod(tmp_path, stat.S_IRUSR | stat.S_IWUSR)
         os.replace(tmp_path, _session_file())
     finally:
         os.umask(old_umask)
+
+
+def load_session() -> Optional[StoredSession]:
+    try:
+        with open(_session_file()) as f:
+            metadata = json.load(f)
+    except (OSError, ValueError, TypeError):
+        return None
+
+    if not isinstance(metadata, dict) or not metadata.get("client_id"):
+        return None
+
+    secret_names = ("client_secret", "access_token", "refresh_token")
+    legacy_secrets = {name: metadata.pop(name, "") for name in secret_names}
+    if all(legacy_secrets.values()):
+        # One-time migration from the old plaintext format. If the secure
+        # store is unavailable, scrub the plaintext file before reporting the
+        # actionable credential-store error; the user can then reauthorize.
+        session = StoredSession.from_metadata(metadata, legacy_secrets)
+        try:
+            store_session_secrets(session.client_id, legacy_secrets)
+        finally:
+            _write_session_metadata(session)
+        return session
+
+    secrets = load_session_secrets(str(metadata["client_id"]))
+    if secrets is None:
+        return None
+    try:
+        return StoredSession.from_metadata(metadata, secrets)
+    except (TypeError, KeyError, ValueError):
+        return None
+
+
+def save_session(session: StoredSession) -> None:
+    """Persist secrets to the OS store, then atomically write safe metadata."""
+    store_session_secrets(
+        session.client_id,
+        {
+            "client_secret": session.client_secret,
+            "access_token": session.access_token,
+            "refresh_token": session.refresh_token,
+        },
+    )
+    _write_session_metadata(session)
+
+def clear_session() -> None:
+    """Disconnect the current account and remove both secret and metadata state."""
+    client_id = ""
+    try:
+        with open(_session_file()) as f:
+            payload = json.load(f)
+        if isinstance(payload, dict):
+            client_id = str(payload.get("client_id") or "")
+    except (OSError, ValueError, TypeError):
+        pass
+    delete_session_secrets(client_id)
+    try:
+        os.unlink(_session_file())
+    except FileNotFoundError:
+        pass
 
 
 def has_valid_session() -> bool:
@@ -291,6 +353,8 @@ def get_access_token() -> str:
             )
             save_session(updated)
             return updated.access_token
+        except CredentialStoreError:
+            raise
         except Exception:
             pass
 
@@ -327,6 +391,8 @@ def start_auth() -> dict:
             )
             save_session(updated)
             return {"authenticated": True, "reusedCachedSession": False}
+        except CredentialStoreError:
+            raise
         except Exception:
             pass
 

@@ -58,18 +58,28 @@ class ClientCredentials:
 
 @dataclass
 class StoredSession(ClientCredentials):
-    """A persisted session: client registration plus the current token pair."""
+    """An in-memory session; secret fields are persisted outside the repo/filesystem."""
 
     access_token: str = ""
     refresh_token: str = ""
     token_expires_at: int = 0
 
-    def to_json(self, indent: int = 2) -> str:
-        return json.dumps(asdict(self), indent=indent)
+    def to_metadata_json(self, indent: int = 2) -> str:
+        """Serialize only non-secret session metadata for the local state file."""
+        data = asdict(self)
+        for field_name in ("client_secret", "access_token", "refresh_token"):
+            data.pop(field_name, None)
+        data["credential_store"] = "os-keyring"
+        data["format_version"] = 2
+        return json.dumps(data, indent=indent)
 
     @classmethod
-    def from_json(cls, text: str) -> "StoredSession":
-        return cls(**json.loads(text))
+    def from_metadata(cls, metadata: dict, secrets: dict[str, str]) -> "StoredSession":
+        data = dict(metadata)
+        data.pop("credential_store", None)
+        data.pop("format_version", None)
+        data.update(secrets)
+        return cls(**data)
 
 
 # ── Runtime config ───────────────────────────────────────────────────────

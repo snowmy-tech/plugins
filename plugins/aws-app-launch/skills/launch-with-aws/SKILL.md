@@ -31,7 +31,7 @@ python3 scripts/launch_with_aws.py <command> [args...]
 
 where `scripts/` is relative to this skill directory. The agent MUST set the working directory to the skill root before invoking commands.
 
-Required files: [launch_with_aws.py](scripts/launch_with_aws.py), [launch_config.py](scripts/launch_config.py), [auth.py](scripts/auth.py), [auth_callback_server.py](scripts/auth_callback_server.py), [launch_api_client.py](scripts/launch_api_client.py), [archive.py](scripts/archive.py), [service model](references/launchwithaws-2026-06-15.json). When loaded via MCP, fetch all and write to a temp directory preserving structure before invoking.
+Required files: [launch_with_aws.py](scripts/launch_with_aws.py), [launch_config.py](scripts/launch_config.py), [auth.py](scripts/auth.py), [credential_store.py](scripts/credential_store.py), [auth_callback_server.py](scripts/auth_callback_server.py), [launch_api_client.py](scripts/launch_api_client.py), [archive.py](scripts/archive.py), [service model](references/launchwithaws-2026-06-15.json). When loaded via MCP, fetch all and write to a temp directory preserving structure before invoking.
 
 Each command outputs JSON to stdout on success, or exits non-zero with a JSON error on stderr.
 
@@ -117,6 +117,20 @@ python3 scripts/launch_with_aws.py auth-wait <pid>
 ```
 
 where `<pid>` is the `pid` value from the `auth-start` response. This blocks until the user completes browser sign-in (or times out after 600s). Returns `{"authenticated": true, "baseUrl": "..."}` on success.
+
+OAuth client secrets and tokens are stored in macOS Keychain. On other platforms, set
+`LAUNCH_WITH_AWS_CREDENTIAL_HELPER` to an OS-keyring or managed-secret helper; the helper
+receives `get|store|delete <client-id>`, reads JSON from stdin for `store`, and returns JSON
+on stdout for `get`. The local session file contains non-secret metadata only.
+
+To disconnect the current account and remove its stored credential:
+
+```bash
+python3 scripts/launch_with_aws.py auth-logout
+```
+
+The plugin remains installed after logout. The next protected operation returns an
+unauthenticated error, and `auth-start` begins a fresh authorization flow.
 
 ### 2. Create Launch
 

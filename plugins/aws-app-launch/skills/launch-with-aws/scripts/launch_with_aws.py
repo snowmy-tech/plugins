@@ -41,7 +41,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import launch_api_client as api
 from archive import ArchiveError, parse_github_url, zip_local_repo
-from auth import SessionExpiredError, start_auth, wait_for_auth
+from auth import SessionExpiredError, clear_session, start_auth, wait_for_auth
 from launch_config import load_config
 
 
@@ -82,6 +82,12 @@ def cmd_auth_wait(pid: str) -> None:
     result = wait_for_auth(pid=int(pid))
     result["baseUrl"] = config.base_url
     _ok(result)
+
+
+def cmd_auth_logout() -> None:
+    """Disconnect and remove the stored OAuth credential."""
+    clear_session()
+    _ok({"authenticated": False, "disconnected": True})
 
 
 def cmd_create_launch(source: str, name: str | None = None) -> None:
@@ -194,6 +200,7 @@ from typing import Any, Callable
 COMMANDS: dict[str, tuple[Callable[..., Any], int]] = {
     "auth-start": (cmd_auth_start, 0),
     "auth-wait": (cmd_auth_wait, 1),
+    "auth-logout": (cmd_auth_logout, 0),
     "create-launch": (cmd_create_launch, 1),
     "get-launch": (cmd_get_launch, 1),
     "list-launches": (cmd_list_launches, 0),
