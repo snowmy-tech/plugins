@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Messaging",
+    "displayName": "Messaging",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Use Event Hubs and Service Bus.",
     "longDescription": "Guidance for Azure Event Hubs and Azure Service Bus SDK configuration, diagnostics, and resilient messaging patterns.",
     "developerName": "Microsoft",

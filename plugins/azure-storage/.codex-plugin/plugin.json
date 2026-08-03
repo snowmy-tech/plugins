@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Storage",
+    "displayName": "Storage",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Use Azure Storage services.",
     "longDescription": "Guidance for Azure Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake Storage.",
     "developerName": "Microsoft",

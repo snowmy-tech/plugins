@@ -9,7 +9,9 @@
   "keywords": ["aws", "swift", "aws-sdk-swift"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS SDK for Swift",
+    "displayName": "SDK · Swift",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Use the AWS SDK for Swift",
     "longDescription": "Language-specific guidance for Swift applications using AWS SDK for Swift clients, configurations, credentials, waiters, and pagination.",
     "developerName": "AWS",

@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Ai Services",
+    "displayName": "AI Services",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Build Azure AI services and AI gateways.",
     "longDescription": "Guidance for Azure AI services including Search, Speech, OpenAI, Document Intelligence, and Azure API Management AI Gateway. Microsoft Foundry is intentionally separate.",
     "developerName": "Microsoft",

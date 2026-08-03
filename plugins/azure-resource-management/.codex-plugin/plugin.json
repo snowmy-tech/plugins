@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Resource Management",
+    "displayName": "Resources",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Discover and visualize Azure resources.",
     "longDescription": "Guidance for cross-subscription Azure resource discovery, Resource Graph queries, tag analysis, and Mermaid architecture diagrams.",
     "developerName": "Microsoft",

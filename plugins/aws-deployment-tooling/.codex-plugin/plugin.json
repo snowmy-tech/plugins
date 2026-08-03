@@ -9,7 +9,9 @@
   "keywords": ["aws", "cdk", "cloudformation", "codepipeline", "codebuild", "codedeploy"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Deployment Tooling",
+    "displayName": "Deployment",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Build and deploy AWS infrastructure",
     "longDescription": "Guidance for AWS CDK, CloudFormation, and AWS CodePipeline, CodeBuild, CodeDeploy, CodeConnections, and CodeArtifact.",
     "developerName": "AWS",

@@ -66,8 +66,8 @@ with this shape:
 
 ## Notes
 
-This plugin is currently skills-first at the plugin level. It does not ship a
-plugin-local `.mcp.json`, matching the public `plugins/build-ios-apps` shape.
+This plugin is currently skills-first at the plugin level. Unlike Build iOS
+Apps, Build macOS Apps does not ship a plugin-local `.mcp.json`.
 
 The default posture is shell-first. Unlike the iOS build plugin, this plugin
 does not assume simulator tooling or touch-driven UI inspection for its main

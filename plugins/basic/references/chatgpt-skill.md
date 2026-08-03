@@ -4,10 +4,10 @@ ChatGPT Skills are reusable, shareable instruction sets (beta; available on
 Business, Enterprise, Edu, Teachers, and Healthcare plans). Create a new Skill
 and paste the body below as its instructions.
 
-**Querying needs an HTTP capability.** Pair this Skill with either an Agent Finder
-**remote MCP connector** (see `mcp/chatgpt/`) or a custom **Action** whose
-OpenAPI calls the Agent Finder `POST /search` endpoint. The Skill supplies the
-behavior; the connector or Action makes the call.
+**Querying needs an HTTP capability.** Pair this Skill with the Agent Finder
+**remote MCP connector** at `https://agentfinder.github.com/api/v1/mcp`, or a
+custom **Action** whose OpenAPI calls the Agent Finder `POST /search` endpoint.
+The Skill supplies the behavior; the connector or Action makes the call.
 
 ---
 

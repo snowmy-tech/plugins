@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Reliability",
+    "displayName": "Reliability",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Assess Azure application resilience.",
     "longDescription": "Guidance for assessing and improving reliability of Azure Functions and App Service workloads, including zone redundancy and multi-region failover.",
     "developerName": "Microsoft",

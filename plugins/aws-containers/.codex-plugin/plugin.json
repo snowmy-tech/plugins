@@ -9,7 +9,9 @@
   "keywords": ["aws", "eks", "ecs", "fargate", "ecr", "containers"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Containers",
+    "displayName": "Containers",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Deploy AWS container workloads",
     "longDescription": "Guidance for Kubernetes on EKS, ECS and Fargate services, ECR registries, and Elastic Beanstalk environments.",
     "developerName": "AWS",

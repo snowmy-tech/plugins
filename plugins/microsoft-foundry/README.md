@@ -1,34 +1,37 @@
-# Microsoft Foundry Canvas
+# Microsoft Foundry
 
-A GitHub Copilot App canvas extension for designing Microsoft Foundry hosted
-agents from a side panel. It combines live Foundry project discovery with
-project-aware prompts to Copilot, portal handoffs, and an embedded local Agent
-Inspector.
+This plugin gives Codex the Microsoft Foundry skill collection and three MCP
+servers for end-to-end Foundry work: project and resource setup, model
+deployment, hosted and prompt agents, invocation, evaluation, observability,
+optimization, fine-tuning, quota, RBAC, networking, and troubleshooting.
 
-## Features
+## Capability preview
 
-- **Project picker** - sign in, search subscriptions and Foundry projects, switch projects, and retain the
-  selection across canvas reopens.
-- **Live project resources** - browse deployed models, Foundry Toolboxes and
-  their tools, project skills, and account guardrails.
-- **Project-aware chat handoff** - model, toolbox, skill, guardrail,
-  initialization, and deployment choices send a ready-to-run prompt to the
-  current Copilot session with the selected project, subscription, and endpoint
-  attached.
-- **Embedded Agent Inspector** - **Inspect Locally** launches or reuses
-  `azd ai agent run --no-inspector` in the Copilot integrated terminal, waits
-  for the agent on port `8088`, and embeds the bundled inspector. Inspector
-  errors can be sent back to Copilot as fix requests.
+Codex routes a matching request to
+[the Microsoft Foundry skill](skills/microsoft-foundry/SKILL.md), which then
+opens only the workflow-specific instructions it needs. The skill remains the
+single detailed procedure; this README is the plugin preview.
 
-## Install
+## Codex runtime
 
-Open GitHub Copilot App, search `microsoft-foundry` from Settings -> Plugins, then install it. 
+The plugin declares these MCP servers in `.mcp.json`:
 
-## Usage
+| Server | Purpose |
+| --- | --- |
+| `azure` | Azure MCP server, started locally with `npx`. |
+| `foundry-mcp` | Remote Microsoft Foundry MCP service. |
+| `microsoft-docs` | Remote Microsoft Learn MCP service. |
 
-1. Ask Copilot to *create a Foundry hosted agent*, then the Canvas will be opened in the right panel automatically.
-2. Open the canvas project menu, sign in if needed, and choose a subscription and Foundry project.
-3. Create a hosted agent with random idea via **Inspire me**, or start from a **Hello world** sample prompt.
-4. Switch to other deployed models, connect existing toolboxes, skills, or guardrails for the created agent.
-5. Click **Deploy to Foundry** when the agent is ready.
-6. Click **Inspect Locally** after the workspace contains a runnable Foundry hosted agent.
+Installation is independent of sign-in. Authentication is requested on use by
+the selected Azure, Foundry, or documentation operation; credentials remain in
+the host-supported credential flow rather than in this plugin. A declined,
+expired, or unavailable authorization should leave the plugin installed and
+allow a later retry.
+
+## GitHub Copilot canvas
+
+The optional GitHub Copilot App canvas is documented separately in
+[the canvas extension README](extensions/microsoft-foundry/README.md). That
+guide contains the Copilot installation and usage instructions. The bundled
+[`extension.mjs`](extensions/microsoft-foundry/extension.mjs) is a generated
+runtime artifact; do not edit it directly.

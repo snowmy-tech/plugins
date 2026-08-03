@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Cost Management",
+    "displayName": "Cost",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Analyze and optimize Azure spending.",
     "longDescription": "Guidance for Azure cost queries, forecasts, cost allocation, and service-specific optimization.",
     "developerName": "Microsoft",

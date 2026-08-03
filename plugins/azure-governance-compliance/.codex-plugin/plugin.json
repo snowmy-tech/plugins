@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Governance & Compliance",
+    "displayName": "Governance",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Audit compliance and validate Azure capacity.",
     "longDescription": "Guidance for Azure compliance and security audits, Key Vault expiration checks, quotas, service limits, and capacity validation.",
     "developerName": "Microsoft",

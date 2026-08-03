@@ -9,7 +9,9 @@
   "keywords": ["aws", "javascript", "typescript", "aws-sdk-v3"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS SDK for JavaScript",
+    "displayName": "SDK · JS",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Use AWS SDK for JavaScript v3",
     "longDescription": "Language-specific guidance for JavaScript and TypeScript applications using AWS SDK for JavaScript v3.",
     "developerName": "AWS",

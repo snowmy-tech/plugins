@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure App Platform",
+    "displayName": "App Platform",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Build and deploy Azure applications.",
     "longDescription": "End-to-end Azure application readiness, azd preparation, validation, deployment, App Service, serverless, hosted Copilot SDK, and enterprise infrastructure planning guidance.",
     "developerName": "Microsoft",

@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Observability",
+    "displayName": "Observability",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Observe and diagnose Azure workloads.",
     "longDescription": "Guidance for Azure Diagnostics, Application Insights instrumentation, and Azure Data Explorer/Kusto queries.",
     "developerName": "Microsoft",

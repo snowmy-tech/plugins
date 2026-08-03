@@ -9,7 +9,9 @@
   "keywords": ["aws", "authentication", "aws-login", "credentials"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Developer Authentication",
+    "displayName": "Sign-in",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Set up local AWS credentials",
     "longDescription": "Guidance for secure, short-lived local AWS credentials with aws login, including verification and reauthentication.",
     "developerName": "AWS",

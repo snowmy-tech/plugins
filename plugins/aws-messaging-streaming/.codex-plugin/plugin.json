@@ -9,7 +9,9 @@
   "keywords": ["aws", "sqs", "sns", "eventbridge", "kinesis", "msk"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Messaging & Streaming",
+    "displayName": "Messaging",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Design AWS event and data flows",
     "longDescription": "Guidance for SQS, SNS, EventBridge, Amazon MQ, Kinesis Data Streams, Data Firehose, Flink, and MSK.",
     "developerName": "AWS",

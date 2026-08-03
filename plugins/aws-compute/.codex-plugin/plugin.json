@@ -9,7 +9,9 @@
   "keywords": ["aws", "ec2", "autoscaling", "systems-manager"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Compute",
+    "displayName": "Compute",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Operate Amazon EC2 workloads",
     "longDescription": "Guidance for EC2 instance selection, launch templates, Auto Scaling, AMIs, IMDSv2, and Systems Manager operations.",
     "developerName": "AWS",

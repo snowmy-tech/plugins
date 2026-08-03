@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Cross-platform agentic resource discovery through Agent Finder, with ranked results and explicit user-controlled installation.",
   "author": {
-    "name": "snowmy-tech",
+    "name": "Agentic Resource Discovery",
     "url": "https://github.com/snowmy-tech"
   },
   "homepage": "https://agenticresourcediscovery.org/connect/",
@@ -18,10 +18,12 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Basic",
+    "displayName": "Agent Finder",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Find agent tools, skills, MCP servers, and APIs.",
     "longDescription": "Search an Agentic Resource Discovery service, present ranked matches, remember the selected finder when local state is available, and never install a result without an explicit user choice.",
-    "developerName": "snowmy-tech",
+    "developerName": "Agentic Resource Discovery",
     "category": "Developer",
     "capabilities": ["Interactive", "Read"],
     "websiteURL": "https://agenticresourcediscovery.org/connect/",

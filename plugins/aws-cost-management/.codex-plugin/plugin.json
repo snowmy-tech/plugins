@@ -9,7 +9,9 @@
   "keywords": ["aws", "cost-explorer", "budgets", "savings-plans", "billing"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Cost Management",
+    "displayName": "Cost",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Analyze and optimize AWS spend",
     "longDescription": "Guidance for Cost Explorer, Budgets, Savings Plans, Reserved Instances, Compute Optimizer, CUR, pricing, and anomalies.",
     "developerName": "AWS",

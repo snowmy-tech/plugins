@@ -9,7 +9,9 @@
   "keywords": ["aws", "python", "boto3", "botocore"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS SDK for Python",
+    "displayName": "SDK · Python",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Use boto3 and botocore",
     "longDescription": "Language-specific guidance for Python applications using boto3 and botocore clients, resources, sessions, paginators, and waiters.",
     "developerName": "AWS",

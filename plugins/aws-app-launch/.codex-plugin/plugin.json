@@ -9,7 +9,9 @@
   "keywords": ["aws", "aws-blocks", "application-launch", "migration", "hosting"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS App Launch",
+    "displayName": "App Launch",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Launch web apps on AWS",
     "longDescription": "Guidance for AWS Blocks applications and the Launch with AWS migration workflow for full-stack and frontend web apps.",
     "developerName": "AWS",

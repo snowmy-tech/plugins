@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Compute",
+    "displayName": "Compute",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Operate Azure VM and VMSS workloads.",
     "longDescription": "Guidance for planning, provisioning, scaling, and troubleshooting Azure Compute virtual machines and virtual machine scale sets.",
     "developerName": "Microsoft",

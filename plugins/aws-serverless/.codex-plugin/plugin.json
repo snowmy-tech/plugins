@@ -9,7 +9,9 @@
   "keywords": ["aws", "lambda", "api-gateway", "step-functions", "eventbridge", "sam"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AWS Serverless",
+    "displayName": "Serverless",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Build AWS serverless systems",
     "longDescription": "Guidance for Lambda, API Gateway, Step Functions, EventBridge, event sources, concurrency, SAM, and CDK serverless stacks.",
     "developerName": "AWS",

@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Kubernetes",
+    "displayName": "Kubernetes",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Build and assess AKS workloads.",
     "longDescription": "Guidance for Azure Kubernetes Service, Automatic readiness, and AI Runway deployment on AKS.",
     "developerName": "Microsoft",

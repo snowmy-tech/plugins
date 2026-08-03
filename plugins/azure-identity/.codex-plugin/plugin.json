@@ -6,8 +6,11 @@
     "name": "Microsoft"
   },
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Azure Identity",
+    "displayName": "Identity",
+    "composerIcon": "./assets/ui-icon.svg",
+    "logo": "./assets/ui-icon.svg",
     "shortDescription": "Use Entra identity and least-privilege RBAC.",
     "longDescription": "Guidance for Microsoft Entra app registrations, Entra Agent Identity Blueprints, and Azure RBAC role selection.",
     "developerName": "Microsoft",

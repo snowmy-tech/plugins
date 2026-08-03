@@ -18,10 +18,12 @@ wants to find resources for. Also use it whenever the user otherwise asks you to
 searches ARD discovery services (Agent Finders) and presents matches for the user
 to choose from.
 
-**Requirements.** Querying a finder needs an HTTP capability — in Claude Code,
-`Bash` with `curl`; or an Agent Finder **MCP connector** (see `mcp/claude/` in
-this repo); or a fetch/web tool. If none is available, tell the user and point
-them at the MCP connector setup.
+**Requirements.** Querying a finder needs an HTTP capability: the configured
+Agent Finder **remote MCP connector**, a fetch/web tool, or (in Claude Code)
+`Bash` with `curl`. The remote MCP endpoint declared by this plugin is
+`https://agentfinder.github.com/api/v1/mcp`; no local connector directory needs
+to be installed. If no HTTP capability is available, tell the user and ask them
+to configure a compatible remote MCP connector or HTTP integration.
 
 Follow this contract exactly:
 
@@ -110,17 +112,14 @@ Once the user picks a result, give them the steps to install or connect **that**
 resource themselves (add it as an MCP connector, install the skill, or call its
 API) using the resource's own endpoint and protocol. Then stop and let them act.
 
-## Installation
+## Host notes
 
-**Claude Code (recommended)** — add this repo as a plugin marketplace and install:
-
-```
-/plugin marketplace add ards-project/connectors
-/plugin install agentfinder@ard-connectors
-```
-
-**Manual** — copy this `agentfinder/` folder into your Claude Code
-skills directory: `~/.claude/skills/` (personal) or `.claude/skills/` (project).
-
-> Custom skills are currently Claude Code–only. The claude.ai web app and Claude
-> Desktop do not yet support uploading your own skills.
+- **Codex:** install the plugin through its marketplace. Codex receives this
+  skill from `skills/` and uses the remote MCP endpoint declared in `.mcp.json`.
+  Do not use Claude Code plugin commands as a Codex installation method.
+- **Claude Code:** use the Claude plugin manifest or copy this skill directory
+  into the appropriate Claude skills location. Configure an HTTP capability or
+  the remote Agent Finder MCP endpoint separately if the host does not do so.
+- **ChatGPT:** use a remote MCP connector or custom Action capable of calling
+  the finder search endpoint; see
+  [the ChatGPT guide](../../references/chatgpt-skill.md).
